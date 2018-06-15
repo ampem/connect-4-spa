@@ -1,0 +1,5 @@
+.checker {
+  padding: 0;
+  min-height: 117px;
+  flex-direction: row;
+}

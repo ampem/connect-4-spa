@@ -1,0 +1,33 @@
+.board-columns {
+  width: 820px;
+  height: 705px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  margin:0;
+  padding:0;
+}
+
+.board-mask {
+	margin:0;
+	padding:0;
+	width: 820px;
+	height: 705px;
+	position: absolute;
+	pointer-events: none;
+	background: url('../assets/mask.svg');
+	background-position: 0 114px;
+}
+
+.board-winner-message, .board-draw-message {
+	position: absolute;
+	left:15%;
+	top:30%;
+	color: red;
+	font-size: 15em;
+	-webkit-text-stroke: 0.025em orange;
+}
+
+.board-player {
+	margin-top:20px;
+}
