@@ -4,6 +4,7 @@ import { RED_PLAYER, YELLOW_PLAYER } from '../constants/player';
 import { isDraw, isWinningMove } from '../utils/gameLogic.js';
 import Cell from './Cell';
 import Column from './Column';
+// eslint-disable-next-line
 import styles from '../styles/board.css';
 
 class Board extends Component {
