@@ -30,9 +30,27 @@ describe('gameLogic', () => {
         'EtoW': {
             0:[], 1:[], 2:[],
             3:[YP],
-            4:[YP, RED_PLAYER],
-            5:[YP, RED_PLAYER],
-            6:[YP, RED_PLAYER]
+            4:[YP, RP],
+            5:[YP, RP],
+            6:[YP, RP]
+        },
+        'SWtoNE': {
+            0:[],
+            1:[],
+            2:[],
+            3:[YP, RP, YP, YP],
+            4:[RP, YP, RP],
+            5:[YP, RP, YP, RP],
+            6:[YP, RP, YP, RP, RP],
+        },
+        'SEtoNW': {
+            0:[YP, RP, YP, RP, RP],
+            1:[YP, RP, YP, RP],
+            2:[RP, YP, RP],
+            3:[YP, RP, YP, YP],
+            4:[],
+            5:[],
+            6:[],
         },
     }
     describe('getCell', () => {
@@ -62,9 +80,19 @@ describe('gameLogic', () => {
     });
     describe('isWinningMove', () => {
         it('detects win conditions', () => {
+            // Vertical
             expect(gameLogic.isWinningMove(6, 3, exampleColumns['NtoS'])).toBe(YELLOW_PLAYER);
+            // Horizontal
             expect(gameLogic.isWinningMove(3, 0, exampleColumns['WtoE'])).toBe(YELLOW_PLAYER);
             expect(gameLogic.isWinningMove(3, 0, exampleColumns['EtoW'])).toBe(YELLOW_PLAYER);
+            // Horizontal (completed at middle)
+            expect(gameLogic.isWinningMove(4, 0, exampleColumns['EtoW'])).toBe(YELLOW_PLAYER);
+            expect(gameLogic.isWinningMove(5, 0, exampleColumns['EtoW'])).toBe(YELLOW_PLAYER);
+            // Diagonals
+            expect(gameLogic.isWinningMove(6, 4, exampleColumns['SWtoNE'])).toBe(RED_PLAYER);
+            expect(gameLogic.isWinningMove(3, 1, exampleColumns['SEtoNW'])).toBe(RED_PLAYER);
+            expect(gameLogic.isWinningMove(3, 1, exampleColumns['SWtoNE'])).toBe(RED_PLAYER);
+            expect(gameLogic.isWinningMove(0, 4, exampleColumns['SEtoNW'])).toBe(RED_PLAYER);
         });
     });
 });

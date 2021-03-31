@@ -56,7 +56,7 @@ function isWinningMove(x, y, columns) {
         (getCell(x + 1, y-1, columns) === player) &&
         (getCell(x + 2, y-2, columns) === player) &&
         (getCell(x + 3, y-3, columns) === player)
-    ) {
+        ) {
         //Diagonal check NW to SE
         return player;
     } else if(
@@ -71,7 +71,7 @@ function isWinningMove(x, y, columns) {
         (getCell(x - 1, y, columns) === player) &&
         (getCell(x + 1, y, columns) === player) &&
         (getCell(x + 2, y, columns) === player)
-    ) {
+        ) {
         return player;
     }
     return false;
