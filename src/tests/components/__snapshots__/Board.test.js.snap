@@ -30,7 +30,11 @@ ShallowWrapper {
                     clickHandler={[Function]}
           />
           <Column
-                    cells={Array []}
+                    cells={
+                              Array [
+                                        "YELLOW_PLAYER",
+                                      ]
+                    }
                     clickHandler={[Function]}
           />
           <Column
@@ -90,7 +94,11 @@ ShallowWrapper {
               clickHandler={[Function]}
 />,
             <Column
-              cells={Array []}
+              cells={
+                            Array [
+                                          "YELLOW_PLAYER",
+                                        ]
+              }
               clickHandler={[Function]}
 />,
             <Column
@@ -135,7 +143,9 @@ ShallowWrapper {
             "key": "1",
             "nodeType": "function",
             "props": Object {
-              "cells": Array [],
+              "cells": Array [
+                "YELLOW_PLAYER",
+              ],
               "clickHandler": [Function],
             },
             "ref": null,
@@ -258,7 +268,11 @@ ShallowWrapper {
                         clickHandler={[Function]}
             />
             <Column
-                        cells={Array []}
+                        cells={
+                                    Array [
+                                                "YELLOW_PLAYER",
+                                              ]
+                        }
                         clickHandler={[Function]}
             />
             <Column
@@ -318,7 +332,11 @@ ShallowWrapper {
                 clickHandler={[Function]}
 />,
               <Column
-                cells={Array []}
+                cells={
+                                Array [
+                                                "YELLOW_PLAYER",
+                                              ]
+                }
                 clickHandler={[Function]}
 />,
               <Column
@@ -363,7 +381,9 @@ ShallowWrapper {
               "key": "1",
               "nodeType": "function",
               "props": Object {
-                "cells": Array [],
+                "cells": Array [
+                  "YELLOW_PLAYER",
+                ],
                 "clickHandler": [Function],
               },
               "ref": null,

@@ -8,6 +8,20 @@ import Board from '../../components/Board';
 describe('Board', () => {
     it('renders correctly', () => {
         const wrapper = shallow(<Board />);
+        wrapper.setState({
+            currentPlayer: RED_PLAYER,
+            winner: false,
+            draw: false,
+            columns: {
+                0: [],
+                1: ["YELLOW_PLAYER"],
+                2: [],
+                3: [],
+                4: [],
+                5: [],
+                6: []
+            }
+        });
         expect(wrapper).toMatchSnapshot();
     });
     it('renders `win` message on win condition', () => {
