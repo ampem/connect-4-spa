@@ -30,4 +30,15 @@ describe('Column', () => {
 			/>);
 		expect(wrapper).toMatchSnapshot();
 	});
+
+	it('Calls `clickHandler` when the column is clicked', () => {
+		const mockClickHandler = jest.fn(x=>42);
+		const wrapper = shallow(
+			<Column
+				clickHandler={mockClickHandler}
+			/>);
+		wrapper.simulate('click')
+		expect(wrapper).toMatchSnapshot();
+		expect(mockClickHandler.mock.calls.length).toBe(1);
+	});
 })
